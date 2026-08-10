@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen flex flex-col bg-neutral-50 text-neutral-900 antialiased font-sans selection:bg-brand-green selection:text-white;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Tabular numbers for financial precision */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Micro interaction transitions */
+.transition-editorial {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
