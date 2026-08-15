@@ -1,5 +1,5 @@
 import React from 'react';
-import { HelpCircle, BookOpen, ShieldCheck } from 'lucide-react';
+import { BookOpen, HelpCircle } from 'lucide-react';
 import { Accordion, AccordionItem } from '../components/ui/Accordion';
 
 export const Faq: React.FC = () => {

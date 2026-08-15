@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, Landmark, TrendingUp, TrendingDown, HelpCircle, LayoutDashboard } from 'lucide-react';
+import { Menu, X, TrendingUp, TrendingDown, HelpCircle, LayoutDashboard } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
