@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
               </div>
               <div>
                 <span className="font-extrabold text-white text-base sm:text-lg tracking-tight block">
-                  Municipalidad de Colonias Unidas
+                  Colonias Unidas
                 </span>
                 <span className="text-xs font-bold text-brand-green tracking-widest uppercase block">
                   UNIDOS POR UNIDAS
@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between items-center text-[11px] text-neutral-500 gap-3">
-          <p>© {new Date().getFullYear()} Municipalidad de Colonias Unidas. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Colonias Unidas. Todos los derechos reservados.</p>
           <p className="font-mono">Prototipo MVP Transparencia</p>
         </div>
       </div>

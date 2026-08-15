@@ -70,7 +70,7 @@ const rawIngresos = [
         id: 'cop-prov-2',
         concepto: 'Impuesto Inmobiliario Urbano y Rural',
         monto: 13095000,
-        descripcion: 'Participación municipal sobre las valuaciones inmobiliarias del distrito.'
+        descripcion: 'Participación coparticipable sobre las valuaciones inmobiliarias del distrito.'
       },
       {
         id: 'cop-prov-3',
@@ -82,7 +82,7 @@ const rawIngresos = [
   },
   {
     id: 'rec-local',
-    nombre: 'Recaudación Local (tasas municipales)',
+    nombre: 'Recaudación Local (tasas de servicios)',
     monto: 21825000,
     descripcion: 'Dinero pagado directamente por los vecinos a través de las tasas de servicios generales, comercio e inmuebles.',
     color: '#76b95d',
@@ -118,19 +118,19 @@ const rawIngresos = [
         id: 'otros-1',
         concepto: 'Alquiler de Salones y Espacios Comunitarios',
         monto: 3200000,
-        descripcion: 'Uso de instalaciones municipales para eventos, ferias y conferencias.'
+        descripcion: 'Uso de instalaciones comunitarias para eventos, ferias y conferencias.'
       },
       {
         id: 'otros-2',
         concepto: 'Multas de Tránsito y Faltas Menores',
         monto: 2575000,
-        descripcion: 'Pagos por juzgado de faltas municipal e infracciones de tránsito.'
+        descripcion: 'Pagos por juzgado de faltas e infracciones de tránsito.'
       },
       {
         id: 'otros-3',
         concepto: 'Canon de Concesiones Varios',
         monto: 1500000,
-        descripcion: 'Cánones de explotación de cantinas, terminal de ómnibus y kioscos municipales.'
+        descripcion: 'Cánones de explotación de cantinas, terminal de ómnibus y kioscos locales.'
       }
     ]
   }
@@ -174,7 +174,7 @@ const rawEgresos = [
     id: 'sueldos-pers',
     nombre: 'Sueldos y Personal',
     monto: 38460000,
-    descripcion: 'Salarios, aportes previsionales y capacitaciones de empleados municipales, personal médico y de limpieza.',
+    descripcion: 'Salarios, aportes previsionales y capacitaciones de empleados de servicios, personal médico y de limpieza.',
     color: '#f59e0b',
     detalles: [
       {
@@ -226,7 +226,7 @@ const rawEgresos = [
         id: 'mant-3',
         concepto: 'Combustible y repuestos de tractores y desmalezadoras',
         monto: 2800000,
-        descripcion: 'Mantenimiento de flota agrícola municipal para corte de pasto en veredones.'
+        descripcion: 'Mantenimiento de maquinaria urbana para corte de pasto en veredones.'
       },
       {
         id: 'mant-4',
@@ -300,12 +300,12 @@ const rawEgresos = [
     id: 'admin',
     nombre: 'Administración',
     monto: 5130000,
-    descripcion: 'Servicios básicos de oficinas municipales, papelería, licencias de software y atención al vecino.',
+    descripcion: 'Servicios básicos de oficinas públicas, papelería, licencias de software y atención al vecino.',
     color: '#92400e',
     detalles: [
       {
         id: 'admin-1',
-        concepto: 'Licencias informáticas y ciberseguridad municipal',
+        concepto: 'Licencias informáticas y ciberseguridad local',
         monto: 2100000,
         descripcion: 'Suscripción a sistemas de facturación, gestión documental y almacenamiento.'
       },
@@ -319,7 +319,7 @@ const rawEgresos = [
         id: 'admin-3',
         concepto: 'Servicios de telefonía e internet de dependencias',
         monto: 1400000,
-        descripcion: 'Conectividad corporativa de fibra óptica en municipalidad y centros comunitarios.'
+        descripcion: 'Conectividad corporativa de fibra óptica en dependencias públicas y centros comunitarios.'
       }
     ]
   }

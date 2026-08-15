@@ -36,7 +36,7 @@ export const Ingresos: React.FC = () => {
                 ¿De dónde viene la plata?
               </h1>
               <p className="text-xs sm:text-sm text-neutral-600 mt-2 max-w-2xl leading-relaxed">
-                Explicación clara del origen de los recursos financieros que forman el presupuesto municipal para este período.
+                Explicación clara del origen de los recursos financieros que forman el presupuesto de la ciudad para este período.
               </p>
             </div>
           </div>

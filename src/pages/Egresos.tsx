@@ -30,13 +30,13 @@ export const Egresos: React.FC = () => {
             <div>
               <div className="inline-flex items-center gap-2 text-brand-amber bg-brand-amber/10 border border-brand-amber/20 px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-wider mb-2">
                 <TrendingDown className="w-3.5 h-3.5" />
-                <span>Inversión y Gastos Municipal • {periodoActual}</span>
+                <span>Inversión y Gastos de la Ciudad • {periodoActual}</span>
               </div>
               <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
                 ¿En qué se gasta?
               </h1>
               <p className="text-xs sm:text-sm text-neutral-600 mt-2 max-w-2xl leading-relaxed">
-                Detalle transparente de las inversiones realizadas en infraestructura, salud, educación, servicios urbanos y administración municipal.
+                Detalle transparente de las inversiones realizadas en infraestructura, salud, educación, servicios urbanos y administración pública local.
               </p>
             </div>
           </div>

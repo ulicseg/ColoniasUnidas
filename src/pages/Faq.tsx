@@ -7,17 +7,17 @@ export const Faq: React.FC = () => {
     {
       id: 'coparticipacion',
       question: '¿Qué es la Coparticipación?',
-      answer: 'Es un sistema mediante el cual los impuestos recaudados por el Gobierno Nacional y el Gobierno Provincial (como el IVA o Ingresos Brutos) se redistribuyen de forma automática y por ley entre los municipios. Es una de las fuentes principales con las que cuenta nuestra ciudad para financiar servicios esenciales y obras públicas.'
+      answer: 'Es un sistema mediante el cual los impuestos recaudados por el Gobierno Nacional y el Gobierno Provincial (como el IVA o Ingresos Brutos) se redistribuyen de forma automática y por ley entre los distritos y comunas. Es una de las fuentes principales con las que cuenta nuestra ciudad para financiar servicios esenciales y obras públicas.'
     },
     {
-      id: 'tasa-municipal',
-      question: '¿Qué es una Tasa Municipal?',
-      answer: 'Es la contribución económica que pagan los vecinos y comerciantes locales a cambio de un servicio concreto directo por parte del municipio. Ejemplos de tasas son la recolección de residuos, el alumbrado público, la limpieza de calles, la inspección de comercios y la desinfección.'
+      id: 'tasa-local',
+      question: '¿Qué es una Tasa o Contribución Local?',
+      answer: 'Es la contribución económica que pagan los vecinos y comerciantes locales a cambio de un servicio urbano concreto directo por parte de la administración pública. Ejemplos de tasas son la recolección de residuos, el alumbrado público, la limpieza de calles, la inspección de comercios y la desinfección.'
     },
     {
       id: 'partida-presupuestaria',
       question: '¿Qué es una Partida Presupuestaria?',
-      answer: 'Es un "monto reservado" con un destino específico. Cuando el municipio aprueba su presupuesto anual, divide los fondos en diferentes categorías fijas (o partidas) para asegurar que haya dinero guardado exclusivamente para salud, obras, educación o sueldos, evitando que se use para otros fines no planificados.'
+      answer: 'Es un "monto reservado" con un destino específico. Cuando se aprueba el presupuesto anual, se dividen los fondos en diferentes categorías fijas (o partidas) para asegurar que haya dinero guardado exclusivamente para salud, obras, educación o sueldos, evitando que se use para otros fines no planificados.'
     },
     {
       id: 'balance',
@@ -27,12 +27,12 @@ export const Faq: React.FC = () => {
     {
       id: 'recaudacion-local',
       question: '¿Qué es la Recaudación Local?',
-      answer: 'Es el total del dinero que ingresa a las arcas municipales cobrado directamente dentro de la ciudad de Colonias Unidas. Incluye el pago puntual de las tasas de los vecinos, habilitaciones de comercios, licencias de conducir y derechos de edificación.'
+      answer: 'Es el total del dinero que ingresa a las arcas de la ciudad cobrado directamente dentro de Colonias Unidas. Incluye el pago puntual de las tasas de los vecinos, habilitaciones de comercios, licencias de conducir y derechos de edificación.'
     },
     {
       id: 'ejecucion-presupuestaria',
       question: '¿Qué es la Ejecución Presupuestaria?',
-      answer: 'Es el seguimiento en tiempo real de cómo se va gastando día a día el presupuesto estimado. Muestra qué porcentaje del dinero planificado para el año ya fue efectivamente invertido en obras concretas, compras de insumos o salarios del personal municipal.'
+      answer: 'Es el seguimiento en tiempo real de cómo se va gastando día a día el presupuesto estimado. Muestra qué porcentaje del dinero planificado para el año ya fue efectivamente invertido en obras concretas, compras de insumos o salarios del personal de servicios comunitarios.'
     }
   ];
 
