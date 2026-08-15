@@ -19,17 +19,26 @@ export const Ingresos: React.FC = () => {
       {/* Header de Sección */}
       <div className="bg-white rounded-xl p-6 sm:p-8 border border-neutral-200 shadow-sm">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-          <div>
-            <div className="inline-flex items-center gap-2 text-brand-green bg-brand-green/10 border border-brand-green/20 px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-wider mb-2">
-              <TrendingUp className="w-3.5 h-3.5" />
-              <span>Orígenes Presupuestarios • {periodoActual}</span>
+          <div className="flex items-start gap-4">
+            <div className="bg-neutral-50 p-2 rounded-xl border border-neutral-200 shadow-xs shrink-0 hidden sm:block">
+              <img
+                src="/assets/logo-cu.png"
+                alt="Emblema Colonias Unidas"
+                className="h-12 w-12 object-contain"
+              />
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-              ¿De dónde viene la plata?
-            </h1>
-            <p className="text-xs sm:text-sm text-neutral-600 mt-2 max-w-2xl leading-relaxed">
-              Explicación clara del origen de los recursos financieros que forman el presupuesto municipal para este período.
-            </p>
+            <div>
+              <div className="inline-flex items-center gap-2 text-brand-green bg-brand-green/10 border border-brand-green/20 px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-wider mb-2">
+                <TrendingUp className="w-3.5 h-3.5" />
+                <span>Orígenes Presupuestarios • {periodoActual}</span>
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
+                ¿De dónde viene la plata?
+              </h1>
+              <p className="text-xs sm:text-sm text-neutral-600 mt-2 max-w-2xl leading-relaxed">
+                Explicación clara del origen de los recursos financieros que forman el presupuesto municipal para este período.
+              </p>
+            </div>
           </div>
 
           {/* Monto Total de Ingresos SIEMPRE CENTRADO */}

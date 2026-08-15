@@ -18,18 +18,31 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between h-16 items-center">
           
           {/* Minimal Clean Brand Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <Landmark className="w-6 h-6 text-brand-green group-hover:scale-105 transition-transform" />
+          <Link to="/" className="flex items-center space-x-3 group shrink-0">
+            <img
+              src="/assets/logo-cu.png"
+              alt="Logo Colonias Unidas"
+              className="h-10 w-10 object-contain group-hover:scale-105 transition-transform"
+            />
             <div className="flex items-center gap-2.5">
               <span className="font-extrabold text-neutral-900 text-base sm:text-lg tracking-tight">
                 Colonias Unidas
               </span>
-              <span className="text-neutral-300 font-light">|</span>
-              <span className="text-xs sm:text-sm font-bold text-brand-green tracking-wider uppercase">
+              <span className="hidden sm:inline text-neutral-300 font-light">|</span>
+              <span className="hidden sm:inline text-xs sm:text-sm font-bold text-brand-green tracking-wider uppercase">
                 Transparencia
               </span>
             </div>
           </Link>
+
+          {/* Logo Secundaria HAY 2027 en Desktop */}
+          <div className="hidden lg:flex items-center border-l border-neutral-200 pl-4 py-1">
+            <img
+              src="/assets/logo-hay2027.png"
+              alt="HAY 2027 - Unidos por Colonias Unidas"
+              className="h-8 object-contain"
+            />
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
@@ -94,6 +107,14 @@ export const Navbar: React.FC = () => {
               </NavLink>
             );
           })}
+
+          <div className="pt-3 mt-2 border-t border-neutral-100 flex justify-center">
+            <img
+              src="/assets/logo-hay2027.png"
+              alt="HAY 2027"
+              className="h-9 object-contain"
+            />
+          </div>
         </div>
       )}
     </header>

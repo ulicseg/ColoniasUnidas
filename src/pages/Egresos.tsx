@@ -19,17 +19,26 @@ export const Egresos: React.FC = () => {
       {/* Header de Sección */}
       <div className="bg-white rounded-xl p-6 sm:p-8 border border-neutral-200 shadow-sm">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-          <div>
-            <div className="inline-flex items-center gap-2 text-brand-amber bg-brand-amber/10 border border-brand-amber/20 px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-wider mb-2">
-              <TrendingDown className="w-3.5 h-3.5" />
-              <span>Inversión y Gastos Municipal • {periodoActual}</span>
+          <div className="flex items-start gap-4">
+            <div className="bg-neutral-50 p-2 rounded-xl border border-neutral-200 shadow-xs shrink-0 hidden sm:block">
+              <img
+                src="/assets/logo-cu.png"
+                alt="Emblema Colonias Unidas"
+                className="h-12 w-12 object-contain"
+              />
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-              ¿En qué se gasta?
-            </h1>
-            <p className="text-xs sm:text-sm text-neutral-600 mt-2 max-w-2xl leading-relaxed">
-              Detalle transparente de las inversiones realizadas en infraestructura, salud, educación, servicios urbanos y administración municipal.
-            </p>
+            <div>
+              <div className="inline-flex items-center gap-2 text-brand-amber bg-brand-amber/10 border border-brand-amber/20 px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-wider mb-2">
+                <TrendingDown className="w-3.5 h-3.5" />
+                <span>Inversión y Gastos Municipal • {periodoActual}</span>
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
+                ¿En qué se gasta?
+              </h1>
+              <p className="text-xs sm:text-sm text-neutral-600 mt-2 max-w-2xl leading-relaxed">
+                Detalle transparente de las inversiones realizadas en infraestructura, salud, educación, servicios urbanos y administración municipal.
+              </p>
+            </div>
           </div>
 
           {/* Monto Total Ejecutado SIEMPRE CENTRADO */}

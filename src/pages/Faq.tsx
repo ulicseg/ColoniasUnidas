@@ -45,22 +45,22 @@ export const Faq: React.FC = () => {
           <div>
             <div className="inline-flex items-center gap-2 text-brand-green bg-brand-green/10 border border-brand-green/20 px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-wider mb-2">
               <BookOpen className="w-3.5 h-3.5" />
-              <span>Glosario para el Vecino</span>
+              <span>Glosario Ciudadano</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-              Preguntas Frecuentes y Términos Clave
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+              Preguntas Frecuentes y Términos
             </h1>
-            <p className="text-xs sm:text-sm text-neutral-600 mt-2 max-w-2xl leading-relaxed">
-              Explicación directa y en lenguaje sencillo de los principales conceptos presupuestarios que encontrás en este portal de transparencia.
+            <p className="text-xs sm:text-sm text-neutral-600 mt-1 max-w-2xl leading-relaxed">
+              Explicación simple e intuitiva de las palabras técnicas que se usan en las cuentas públicas de la ciudad.
             </p>
           </div>
 
-          <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-3.5 flex items-center gap-3 shrink-0">
-            <ShieldCheck className="w-5 h-5 text-brand-green" />
-            <div>
-              <span className="text-xs font-bold text-neutral-900 block">Información Clara</span>
-              <span className="text-[11px] text-neutral-500 block">Sin jerga contable compleja</span>
-            </div>
+          <div className="bg-neutral-50 px-3.5 py-1.5 rounded-xl border border-neutral-200 shadow-xs shrink-0 self-start sm:self-center">
+            <img
+              src="/assets/logo-hay2027.png"
+              alt="HAY 2027"
+              className="h-8 sm:h-9 object-contain"
+            />
           </div>
         </div>
       </div>

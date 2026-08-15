@@ -8,25 +8,43 @@ export const Resumen: React.FC = () => {
   return (
     <div className="space-y-8 animate-in fade-in duration-300">
       
-      {/* Encabezado y Mensaje de Bienvenida */}
-      <div className="bg-white rounded-xl p-6 sm:p-8 border border-neutral-200 shadow-sm">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div>
-            <div className="inline-flex items-center gap-2 text-brand-green bg-brand-green/10 border border-brand-green/20 px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-wider mb-3">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Resumen Ejecutivo • {periodoActual}</span>
+      {/* Encabezado y Mensaje de Bienvenida con Logos de Marca */}
+      <div className="bg-white rounded-xl p-6 sm:p-8 border border-neutral-200 shadow-sm relative overflow-hidden">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+          <div className="flex items-start gap-4">
+            <div className="bg-neutral-50 p-2 rounded-xl border border-neutral-200 shadow-xs shrink-0 hidden sm:block">
+              <img
+                src="/assets/logo-cu.png"
+                alt="Emblema Colonias Unidas"
+                className="h-14 w-14 object-contain"
+              />
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
-              Estado Financiero de Colonias Unidas
-            </h1>
-            <p className="text-sm text-neutral-600 mt-2 max-w-3xl leading-relaxed">
-              Bienvenido al portal público. En este panel podés ver de forma simple e intuitiva el total de recursos ingresados y gastados en el municipio durante este período.
-            </p>
+            <div>
+              <div className="inline-flex items-center gap-2 text-brand-green bg-brand-green/10 border border-brand-green/20 px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-wider mb-2.5">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                <span>Resumen Ejecutivo • {periodoActual}</span>
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+                Estado Financiero de Colonias Unidas
+              </h1>
+              <p className="text-sm text-neutral-600 mt-1.5 max-w-2xl leading-relaxed">
+                Bienvenido al portal público. En este panel podés ver de forma simple e intuitiva el total de recursos ingresados y gastados en el municipio durante este período.
+              </p>
+            </div>
           </div>
 
-          <div className="flex items-center gap-2 text-xs font-medium text-neutral-600 bg-neutral-100 px-3.5 py-2 rounded-lg shrink-0 border border-neutral-200 self-start md:self-center">
-            <Calendar className="w-4 h-4 text-brand-green" />
-            <span>Actualizado: {fechaActualizacion}</span>
+          <div className="flex flex-col items-start md:items-end gap-3 shrink-0 self-start md:self-center">
+            <div className="bg-neutral-50 px-3.5 py-1.5 rounded-xl border border-neutral-200 shadow-xs">
+              <img
+                src="/assets/logo-hay2027.png"
+                alt="HAY 2027 - Unidos por Colonias Unidas"
+                className="h-9 sm:h-10 object-contain"
+              />
+            </div>
+            <div className="flex items-center gap-2 text-xs font-medium text-neutral-600 bg-neutral-100 px-3 py-1.5 rounded-lg border border-neutral-200">
+              <Calendar className="w-4 h-4 text-brand-green" />
+              <span>Actualizado: {fechaActualizacion}</span>
+            </div>
           </div>
         </div>
       </div>
