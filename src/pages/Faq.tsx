@@ -37,48 +37,46 @@ export const Faq: React.FC = () => {
   ];
 
   return (
-    <div className="space-y-6 animate-in fade-in duration-200">
+    <div className="space-y-4 py-1 animate-in fade-in duration-200">
       
       {/* Encabezado */}
-      <div className="bg-white rounded-xl p-6 sm:p-7 border border-neutral-200 shadow-sm">
+      <div className="bg-white rounded-xl p-4 sm:p-5 border border-neutral-200 shadow-sm">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 text-brand-green bg-brand-green/10 border border-brand-green/20 px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 text-brand-green bg-brand-green/10 border border-brand-green/20 px-2.5 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider mb-1">
               <BookOpen className="w-3.5 h-3.5" />
               <span>Glosario Ciudadano</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+            <h1 className="text-xl sm:text-2xl font-black text-neutral-900 tracking-tight">
               Preguntas Frecuentes y Términos
             </h1>
-            <p className="text-xs sm:text-sm text-neutral-600 mt-1 max-w-2xl leading-relaxed">
+            <p className="text-xs sm:text-sm text-neutral-600 mt-0.5 max-w-2xl leading-snug">
               Explicación simple e intuitiva de las palabras técnicas que se usan en las cuentas públicas de la ciudad.
             </p>
           </div>
 
-          <div className="bg-neutral-50 px-3.5 py-1.5 rounded-xl border border-neutral-200 shadow-xs shrink-0 self-start sm:self-center">
+          <div className="bg-neutral-50 px-3 py-1 rounded-xl border border-neutral-200 shadow-xs shrink-0 self-start sm:self-center">
             <img
               src="/assets/logo-hay2027.png"
               alt="HAY 2027"
-              className="h-8 sm:h-9 object-contain"
+              className="h-7 sm:h-8 object-contain"
             />
           </div>
         </div>
       </div>
 
       {/* Lista de Acordeón */}
-      <div className="max-w-4xl mx-auto space-y-3">
+      <div className="max-w-4xl mx-auto space-y-2">
         <div className="flex items-center justify-between px-1">
-          <h2 className="font-bold text-neutral-900 text-sm sm:text-base flex items-center gap-2">
+          <h2 className="font-bold text-neutral-900 text-xs sm:text-sm flex items-center gap-2">
             <HelpCircle className="w-4 h-4 text-brand-green" />
             <span>Conceptos Financieros Explicados</span>
           </h2>
-          <span className="text-xs text-neutral-500 font-medium">6 términos definidos</span>
+          <span className="text-[11px] text-neutral-500 font-medium">6 términos definidos</span>
         </div>
 
         <Accordion items={faqItems} />
       </div>
-
-
 
     </div>
   );

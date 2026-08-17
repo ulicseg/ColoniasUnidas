@@ -41,7 +41,7 @@ export const KpiCard: React.FC<KpiCardProps> = ({
   const style = variantStyles[variant];
 
   return (
-    <div className={`relative bg-white rounded-xl p-6 sm:p-7 border ${style.border} shadow-sm transition-editorial overflow-hidden group`}>
+    <div className={`relative bg-white rounded-xl p-4 sm:p-5 border ${style.border} shadow-sm transition-editorial overflow-hidden group`}>
       {/* Accent top line */}
       <div className={`absolute top-0 left-0 right-0 h-1 ${style.accentBar}`} />
 
