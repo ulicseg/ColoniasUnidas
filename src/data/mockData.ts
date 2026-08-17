@@ -237,172 +237,173 @@ const rawIngresos = [
   }
 ];
 
+// Egresos con montos en 0 hasta contar con la rendición oficial fehaciente de la Municipalidad
 const rawEgresos = [
   {
     id: 'obras-pub',
     nombre: 'Obras Públicas e Infraestructura',
-    monto: 485000000,
+    monto: 0,
     descripcion: 'Pavimentación de calles, arreglo de caminos rurales, luces LED en barrios y desagües.',
     color: '#d97706',
     detalles: [
       {
         id: 'obras-1',
         concepto: 'Pavimento en Avenidas Principales',
-        monto: 210000000,
+        monto: 0,
         descripcion: 'Asfalto y cordón cuneta para mejorar la circulación vial.'
       },
       {
         id: 'obras-2',
         concepto: 'Nuevas Luces LED en la Ciudad',
-        monto: 145000000,
-        descripcion: 'Instalación de 400 luminarias LED de mayor iluminación y ahorro energético.'
+        monto: 0,
+        descripcion: 'Instalación de luminarias LED en barrios de la ciudad.'
       },
       {
         id: 'obras-3',
         concepto: 'Desagües y Obras Anti-inundaciones',
-        monto: 85000000,
-        descripcion: 'Canales y zanjas de hormigón para evitar acumulación de agua cuando llueve.'
+        monto: 0,
+        descripcion: 'Canales y zanjas de hormigón para evacuación hídrica.'
       },
       {
         id: 'obras-4',
         concepto: 'Enripiado y Arreglo de Caminos Rurales',
-        monto: 45000000,
-        descripcion: 'Mantenimiento de caminos para que los productores puedan sacar su cosecha.'
+        monto: 0,
+        descripcion: 'Mantenimiento de caminos rurales para productores.'
       }
     ]
   },
   {
     id: 'sueldos-pers',
     nombre: 'Sueldos del Personal Municipal',
-    monto: 410000000,
-    descripcion: 'Salarios mensuales, aportes de jubilación y ropa de trabajo de todos los empleados de la ciudad.',
+    monto: 0,
+    descripcion: 'Salarios mensuales, aportes de jubilación y ropa de trabajo de los empleados municipales.',
     color: '#f59e0b',
     detalles: [
       {
         id: 'sueldos-1',
         concepto: 'Sueldos Netos de Empleados y Trabajadores',
-        monto: 290000000,
-        descripcion: 'Pago puntual de los haberes de barrenderos, recolectores y administrativos.'
+        monto: 0,
+        descripcion: 'Haberes de personal administrativo, recolección y maestranza.'
       },
       {
         id: 'sueldos-2',
         concepto: 'Jubilaciones y Obra Social (InSSSeP)',
-        monto: 95000000,
-        descripcion: 'Aportes obligatorios de ley para la salud y jubilación del personal.'
+        monto: 0,
+        descripcion: 'Aportes previsionales y salud de los trabajadores.'
       },
       {
         id: 'sueldos-3',
         concepto: 'Ropa de Trabajo y Calzado de Seguridad',
-        monto: 25000000,
-        descripcion: 'Entrega de uniformes, guantes, chalecos y botas de protección.'
+        monto: 0,
+        descripcion: 'Uniformes e indumentaria de protección laboral.'
       }
     ]
   },
   {
     id: 'mant-urbano',
-    nombre: 'Limpieza y Servicios Urbano',
-    monto: 125000000,
-    descripcion: 'Recolección de basura todos los días, desmalezado de plazas, tractores y combustible.',
+    nombre: 'Limpieza y Servicios Urbanos',
+    monto: 0,
+    descripcion: 'Recolección diaria de basura, desmalezado de plazas, maquinaria y combustible.',
     color: '#fbbf24',
     detalles: [
       {
         id: 'mant-1',
         concepto: 'Combustible para Camiones y Tractores',
-        monto: 65000000,
-        descripcion: 'Gasoil para que los camiones de basura y tractores salgan a trabajar diariamente.'
+        monto: 0,
+        descripcion: 'Gasoil para vehículos de servicios urbanos y desmalezadoras.'
       },
       {
         id: 'mant-2',
         concepto: 'Servicio de Recolección de Residuos',
-        monto: 40000000,
-        descripcion: 'Limpieza domiciliaria y tratamiento ecológico en el vaciadero.'
+        monto: 0,
+        descripcion: 'Operatividad de limpieza domiciliaria e higiene urbana.'
       },
       {
         id: 'mant-3',
         concepto: 'Reparación y Repuestos de Maquinarias',
-        monto: 20000000,
-        descripcion: 'Arreglo mecánico de herramientas, motoniveladoras y tractores.'
+        monto: 0,
+        descripcion: 'Mantenimiento mecánico del parque automotor municipal.'
       }
     ]
   },
   {
     id: 'salud',
     nombre: 'Salud y Ayuda Social a Vecinos',
-    monto: 80000000,
-    descripcion: 'Medicamentos gratuitos, mantenimiento de la ambulancia y asistencia de emergencia a familias.',
+    monto: 0,
+    descripcion: 'Medicamentos gratuitos, ambulancia municipal y asistencia de emergencia a familias.',
     color: '#d99726',
     detalles: [
       {
         id: 'salud-1',
         concepto: 'Remedios e Insumos para el Centro de Salud',
-        monto: 45000000,
-        descripcion: 'Comprimidos, jarabes, gasas y elementos de curación gratuita para vecinos.'
+        monto: 0,
+        descripcion: 'Medicamentos y descartables para atención primaria.'
       },
       {
         id: 'salud-2',
         concepto: 'Ambulancia Municipal 24hs',
-        monto: 20000000,
-        descripcion: 'Combustible y guardia activa para traslados médicos urgentes.'
+        monto: 0,
+        descripcion: 'Disponibilidad de unidad de traslado sanitario.'
       },
       {
         id: 'salud-3',
         concepto: 'Módulos Alimentarios y Ayuda de Emergencia',
-        monto: 15000000,
-        descripcion: 'Asistencia alimentaria a familias vulnerables de la comunidad.'
+        monto: 0,
+        descripcion: 'Asistencia social a familias en situación de vulnerabilidad.'
       }
     ]
   },
   {
     id: 'educacion-cultura',
     nombre: 'Educación, Escuelas y Deporte',
-    monto: 35000000,
-    descripcion: 'Apoyo a las escuelas de la localidad, becas para estudiantes, talleres de oficios y festivales.',
+    monto: 0,
+    descripcion: 'Apoyo a las escuelas de la localidad, becas estudiantiles, talleres de oficios y festivales.',
     color: '#b45309',
     detalles: [
       {
         id: 'edu-1',
         concepto: 'Carnavales y Fiestas de la Ciudad',
-        monto: 15000000,
-        descripcion: 'Apoyo para sonido, escenario y comparsas de Colonias Unidas.'
+        monto: 0,
+        descripcion: 'Organización de eventos culturales y comparsas comunitarias.'
       },
       {
         id: 'edu-2',
         concepto: 'Becas y Ayuda a Escuelas Públicas',
-        monto: 12000000,
-        descripcion: 'Ayudas de transporte y pintura/reparaciones edilicias escolares.'
+        monto: 0,
+        descripcion: 'Fondo de asistencia educativa y apoyo estudiantil.'
       },
       {
         id: 'edu-3',
         concepto: 'Deportes y Cursos de Oficios Gratuitos',
-        monto: 8000000,
-        descripcion: 'Pelotas, camisetas e insumos para escuelas deportivas de chicos.'
+        monto: 0,
+        descripcion: 'Materiales deportivos y talleres comunitarios.'
       }
     ]
   },
   {
     id: 'admin',
     nombre: 'Administración y Atención al Vecino',
-    monto: 18000000,
+    monto: 0,
     descripcion: 'Internet en oficinas públicas, sistemas de atención al ciudadano y gastos de oficina.',
     color: '#92400e',
     detalles: [
       {
         id: 'admin-1',
         concepto: 'Internet y Sistemas Informáticos',
-        monto: 9000000,
-        descripcion: 'Conexión por fibra óptica para atender rápido los trámites de los vecinos.'
+        monto: 0,
+        descripcion: 'Conectividad corporativa y licencias de gestión.'
       },
       {
         id: 'admin-2',
         concepto: 'Papelería e Imprenta Municipal',
-        monto: 5000000,
-        descripcion: 'Resmas, formularios e impresiones oficiales.'
+        monto: 0,
+        descripcion: 'Formularios e insumos de atención al público.'
       },
       {
         id: 'admin-3',
         concepto: 'Servicios de Teléfono y Luz de Dependencias',
-        monto: 4000000,
-        descripcion: 'Facturas de energía e iluminación en oficinas de atención pública.'
+        monto: 0,
+        descripcion: 'Servicios públicos de dependencias municipales.'
       }
     ]
   }
@@ -410,8 +411,8 @@ const rawEgresos = [
 
 // Calculamos totales dinámicamente
 export const totalIngresos = rawIngresos.reduce((acc, item) => acc + item.monto, 0); // $1.373.014.884
-export const totalEgresos = rawEgresos.reduce((acc, item) => acc + item.monto, 0);   // $1.153.000.000
-export const balance = totalIngresos - totalEgresos;                                 // $220.014.884
+export const totalEgresos = rawEgresos.reduce((acc, item) => acc + item.monto, 0);   // $0 (A la espera de rendición fehaciente)
+export const balance = totalIngresos - totalEgresos;                                 // $1.373.014.884
 export const fechaActualizacion = '16 de Agosto de 2026';
 export const periodoActual = 'Año 2026';
 
@@ -423,7 +424,7 @@ export const ingresos: FinancialItem[] = rawIngresos.map(item => ({
 
 export const egresos: FinancialItem[] = rawEgresos.map(item => ({
   ...item,
-  porcentaje: Math.round((item.monto / totalEgresos) * 100)
+  porcentaje: 0
 }));
 
 export const mockFinancialData: FinancialData = {
