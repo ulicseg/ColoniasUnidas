@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, TrendingUp, TrendingDown, HelpCircle, LayoutDashboard, ShieldCheck } from 'lucide-react';
+import { Menu, X, TrendingUp, TrendingDown, HelpCircle, LayoutDashboard } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,17 +13,24 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-2xs">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           
-          {/* Brand Logo de HAY 2027 e Identidad Ciudadana */}
+          {/* Logo y Marca bien estructurados */}
           <Link to="/" className="flex items-center space-x-3 group shrink-0">
-            <div className="bg-neutral-50 p-1 rounded-xl border border-neutral-200 shadow-2xs group-hover:scale-105 transition-transform">
+            <div className="flex items-center gap-2">
+              <div className="bg-white p-1 rounded-xl border border-neutral-200 shadow-2xs group-hover:scale-105 transition-transform">
+                <img
+                  src="/assets/logo-hay2027.png"
+                  alt="Logo HAY 2027"
+                  className="h-8 sm:h-9 object-contain"
+                />
+              </div>
               <img
-                src="/assets/logo-hay2027.png"
-                alt="Logo HAY 2027"
-                className="h-8 sm:h-9 object-contain"
+                src="/assets/logo-cu.png"
+                alt="Emblema Colonias Unidas"
+                className="h-7 w-7 object-contain opacity-70 hidden sm:block"
               />
             </div>
             <div className="flex items-center gap-2">
@@ -32,19 +39,13 @@ export const Navbar: React.FC = () => {
               </span>
               <span className="text-neutral-300 font-light">|</span>
               <span className="text-xs font-bold text-brand-green tracking-wider uppercase">
-                Transparencia Ciudadana
+                Transparencia
               </span>
             </div>
           </Link>
 
-          {/* Badge de Proyecto Independiente en Desktop */}
-          <div className="hidden lg:flex items-center gap-2 text-xs font-semibold text-neutral-600 bg-neutral-100/80 px-3 py-1 rounded-lg border border-neutral-200/80">
-            <ShieldCheck className="w-4 h-4 text-brand-green" />
-            <span>Iniciativa Independiente • Colonias Unidas</span>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
+          {/* Navegación Desktop alineada a la derecha */}
+          <nav className="hidden md:flex items-center space-x-1 sm:space-x-2">
             {navLinks.map((link) => {
               const Icon = link.icon;
               return (
@@ -52,9 +53,9 @@ export const Navbar: React.FC = () => {
                   key={link.to}
                   to={link.to}
                   className={({ isActive }) =>
-                    `flex items-center gap-2 px-3 py-1.5 rounded-lg font-bold text-xs sm:text-sm transition-colors ${
+                    `flex items-center gap-2 px-3.5 py-2 rounded-xl font-bold text-xs sm:text-sm transition-all ${
                       isActive
-                        ? 'bg-neutral-900 text-white'
+                        ? 'bg-neutral-900 text-white shadow-xs'
                         : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100'
                     }`
                   }
@@ -66,7 +67,7 @@ export const Navbar: React.FC = () => {
             })}
           </nav>
 
-          {/* Mobile Hamburger Button */}
+          {/* Botón Menú Hamburguesa en Mobile */}
           <div className="flex md:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -80,12 +81,18 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation Drawer */}
+      {/* Menú Desplegable en Móvil */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-neutral-200 bg-white px-4 pt-2 pb-4 space-y-2 shadow-lg">
-          <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider px-3 py-1">
-            Navegación del Portal • HAY 2027
-          </p>
+        <div className="md:hidden border-b border-neutral-200 bg-white px-4 pt-2 pb-4 space-y-2 shadow-lg animate-in fade-in duration-200">
+          <div className="px-3 py-1 border-b border-neutral-100 mb-1 flex items-center justify-between">
+            <span className="text-[10px] font-extrabold text-neutral-400 uppercase tracking-wider">
+              Navegación • HAY 2027
+            </span>
+            <span className="text-[10px] font-bold text-brand-green bg-brand-green/10 px-2 py-0.5 rounded">
+              Transparencia Ciudadana
+            </span>
+          </div>
+
           {navLinks.map((link) => {
             const Icon = link.icon;
             return (
@@ -107,12 +114,12 @@ export const Navbar: React.FC = () => {
             );
           })}
 
-          <div className="pt-3 mt-2 border-t border-neutral-100 flex flex-col items-center gap-1.5 text-center">
-            <span className="text-[11px] font-bold text-neutral-500">Iniciativa Independiente de HAY 2027</span>
+          <div className="pt-3 mt-2 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-500 font-medium px-2">
+            <span>Iniciativa de HAY 2027</span>
             <img
               src="/assets/logo-hay2027.png"
               alt="HAY 2027"
-              className="h-8 object-contain"
+              className="h-7 object-contain"
             />
           </div>
         </div>
