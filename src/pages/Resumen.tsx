@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, TrendingDown, Scale, Calendar, ArrowRight, ShieldCheck } from 'lucide-react';
+import { TrendingUp, TrendingDown, Scale, Calendar, ArrowRight, ShieldCheck, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { totalIngresos, totalEgresos, balance, fechaActualizacion, periodoActual, formatCurrency } from '../data/mockData';
 
@@ -183,6 +183,16 @@ export const Resumen: React.FC = () => {
           </div>
           <ArrowRight className="w-5 h-5 text-brand-amber group-hover:translate-x-1 transition-transform shrink-0" />
         </Link>
+      </div>
+
+      {/* Letra Chica con Fuente Oficial de Datos al Pie */}
+      <div className="pt-2">
+        <div className="bg-white rounded-xl p-3.5 border border-neutral-200/80 text-[11px] text-neutral-500 leading-relaxed flex items-start gap-2.5 shadow-2xs">
+          <FileText className="w-4 h-4 text-brand-green shrink-0 mt-0.5" />
+          <p>
+            <strong className="text-neutral-700 font-bold">Fuente de respaldatoria de datos:</strong> Información pública procesada de la <em>Consulta de Pagos Electrónicos de la Tesorería General de la Provincia del Chaco</em> (Sistema SAFYC 1003508 • CUIT 30670226723 Municipalidad de Colonias Unidas • Ejercicio 2026).
+          </p>
+        </div>
       </div>
 
     </div>

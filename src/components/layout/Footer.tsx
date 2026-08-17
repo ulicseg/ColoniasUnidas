@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck } from 'lucide-react';
+import { ShieldCheck, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
@@ -56,9 +56,17 @@ export const Footer: React.FC = () => {
 
         </div>
 
+        {/* Letra chica oficial de la Fuente de Datos */}
+        <div className="bg-neutral-900/80 border border-neutral-800/80 rounded-xl p-3 mb-6 text-[10px] text-neutral-400 leading-relaxed flex items-start gap-2.5">
+          <FileText className="w-3.5 h-3.5 text-brand-green shrink-0 mt-0.5" />
+          <div>
+            <strong className="text-neutral-300 font-bold">Fuente de los datos:</strong> Información pública extraída de la Consulta de Pagos Electrónicos de la Tesorería General de la Provincia del Chaco — Sistema de Administración Financiera (Safyc 1003508 • C.U.I.T 30670226723 Municipalidad de Colonias Unidas • Nuevo Banco del Chaco S.A. • Ejercicio 2026).
+          </div>
+        </div>
+
         <div className="flex flex-col sm:flex-row justify-between items-center text-[11px] text-neutral-500 gap-3">
           <p>© {new Date().getFullYear()} Colonias Unidas. Todos los derechos reservados.</p>
-          <p className="font-mono">Prototipo MVP Transparencia</p>
+          <p className="font-mono">Portal de Transparencia Ciudadana</p>
         </div>
       </div>
     </footer>
