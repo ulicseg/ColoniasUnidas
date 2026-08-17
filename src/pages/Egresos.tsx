@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TrendingDown, PieChart as PieChartIcon, Search } from 'lucide-react';
+import { TrendingDown, PieChart as PieChartIcon, Search, Building2, Handshake, Info } from 'lucide-react';
 import { egresos, totalEgresos, formatCurrency, periodoActual, FinancialItem } from '../data/mockData';
 import { ExpenseChart } from '../components/charts/ExpenseChart';
 import { CategoryDetailModal } from '../components/ui/CategoryDetailModal';
@@ -36,20 +36,52 @@ export const Egresos: React.FC = () => {
                 ¿En qué se gasta?
               </h1>
               <p className="text-xs sm:text-sm text-neutral-600 max-w-2xl leading-relaxed mt-0.5">
-                Detalle simple y transparente de la inversión realizada en obras públicas, salud, educación y servicios para la ciudad.
+                Proyección de la inversión realizada en obras públicas, salud, educación y servicios para la ciudad.
               </p>
             </div>
           </div>
 
-          {/* Monto Total Ejecutado */}
+          {/* Monto Total Invertido */}
           <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-3.5 text-center shrink-0 min-w-full sm:min-w-[210px] self-center sm:self-auto">
             <span className="text-[10px] font-extrabold text-neutral-500 uppercase tracking-wider block text-center">
-              Monto Total Invertido
+              Monto Total Invertido Proyectado
             </span>
             <span className="text-xl sm:text-2xl font-black text-brand-amber block mt-0.5 tabular-nums text-center">
               {formatCurrency(totalEgresos)}
             </span>
           </div>
+        </div>
+      </div>
+
+      {/* Banner de Invitación Abierta a la Municipalidad */}
+      <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-5 sm:p-6 text-neutral-900 space-y-3.5 shadow-xs">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div className="inline-flex items-center gap-2 bg-brand-amber text-white px-3 py-1 rounded-lg text-xs font-black uppercase tracking-wider">
+            <Building2 className="w-4 h-4" />
+            <span>Invitación a la Municipalidad de Colonias Unidas</span>
+          </div>
+          <span className="text-[11px] font-bold text-amber-900 bg-amber-200/80 px-3 py-0.5 rounded-full border border-amber-300">
+            A la espera de participación oficial
+          </span>
+        </div>
+
+        <h2 className="text-lg sm:text-xl font-black text-neutral-900 tracking-tight">
+          ¡Construyamos la transparencia juntos para todos los vecinos!
+        </h2>
+
+        <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed max-w-4xl">
+          Los datos de los <strong>Ingresos Provinciales ($1.324,5 millones)</strong> ya están verificados y abiertos a la comunidad. Invitamos formalmente a las autoridades de la <strong>Municipalidad de Colonias Unidas</strong> a sumarse a este portal de datos abiertos y compartir sus rendiciones e informes de gastos para que cada vecino pueda ver con total claridad cómo se invierte el dinero en la ciudad.
+        </p>
+
+        <div className="pt-1 flex flex-wrap items-center gap-3 text-xs font-medium text-neutral-700">
+          <span className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-xl border border-neutral-200/80 shadow-2xs font-bold text-neutral-900">
+            <Handshake className="w-4 h-4 text-brand-amber" />
+            <span>Espacio abierto a la rendición municipal</span>
+          </span>
+          <span className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-xl border border-neutral-200/80 shadow-2xs">
+            <Info className="w-4 h-4 text-neutral-500" />
+            <span>Cifras mostradas abajo: Proyección estimativa de presupuesto municipal</span>
+          </span>
         </div>
       </div>
 
@@ -63,7 +95,7 @@ export const Egresos: React.FC = () => {
               <PieChartIcon className="w-4 h-4 text-brand-amber" />
               <span>Distribución por Rubro</span>
             </h2>
-            <span className="text-[10px] text-neutral-400 font-medium">Interactiva</span>
+            <span className="text-[10px] text-neutral-400 font-medium">Proyección</span>
           </div>
           
           <div className="w-full py-1">
@@ -71,7 +103,7 @@ export const Egresos: React.FC = () => {
           </div>
 
           <p className="text-[11px] text-neutral-400 text-center font-medium pt-1">
-            Toca o pasa sobre una sección para ver el monto exacto invertido.
+            Toca o pasa sobre una sección para ver el monto invertido.
           </p>
         </div>
 
