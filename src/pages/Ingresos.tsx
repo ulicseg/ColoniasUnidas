@@ -3,7 +3,7 @@ import { TrendingUp, PieChart as PieChartIcon, Search } from 'lucide-react';
 import { ingresos, totalIngresos, formatCurrency, periodoActual, FinancialItem } from '../data/mockData';
 import { IncomeChart } from '../components/charts/IncomeChart';
 import { CategoryDetailModal } from '../components/ui/CategoryDetailModal';
-import { TesoreriaPaymentsTable } from '../components/ui/TesoreriaPaymentsTable';
+import { MonthlyIncomeBreakdown } from '../components/ui/MonthlyIncomeBreakdown';
 
 export const Ingresos: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<FinancialItem | null>(null);
@@ -37,7 +37,7 @@ export const Ingresos: React.FC = () => {
                 ¿De dónde viene la plata?
               </h1>
               <p className="text-xs sm:text-sm text-neutral-600 max-w-2xl leading-snug mt-0.5">
-                Desglose transparente del origen de los fondos públicos que sustentan la administración municipal de Colonias Unidas durante 2026.
+                Explicación simple de los recursos que ingresan a Colonias Unidas desde la Provincia y el aporte de los vecinos.
               </p>
             </div>
           </div>
@@ -48,7 +48,7 @@ export const Ingresos: React.FC = () => {
               Monto Total de Ingresos 2026
             </span>
             <span className="text-xl sm:text-2xl font-black text-brand-green block mt-0.5 tabular-nums text-center">
-              {formatCurrency(totalIngresos, true)}
+              {formatCurrency(totalIngresos)}
             </span>
           </div>
         </div>
@@ -125,10 +125,10 @@ export const Ingresos: React.FC = () => {
                 {/* Monto Percibido */}
                 <div className="text-center shrink-0 border-t sm:border-t-0 sm:border-l border-neutral-100 pt-2 sm:pt-0 sm:pl-4 self-center sm:self-auto w-full sm:w-auto">
                   <span className="text-[10px] text-neutral-400 font-semibold block uppercase text-center">
-                    Monto Percibido
+                    Monto Ingresado
                   </span>
                   <span className="text-base sm:text-lg font-black text-neutral-900 tabular-nums block text-center mt-0.5">
-                    {formatCurrency(item.monto, true)}
+                    {formatCurrency(item.monto)}
                   </span>
                 </div>
               </div>
@@ -152,9 +152,9 @@ export const Ingresos: React.FC = () => {
 
       </div>
 
-      {/* Sección Protagónica: Consulta de Pagos Electrónicos Reales de Tesorería Provincial */}
+      {/* Vista Didáctica: Coparticipación Provincial Mes a Mes */}
       <div className="pt-2">
-        <TesoreriaPaymentsTable />
+        <MonthlyIncomeBreakdown />
       </div>
 
       {/* Modal Emergente de Detalle de Rubro */}

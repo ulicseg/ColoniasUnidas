@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, TrendingDown, Scale, Calendar, ArrowRight, Info, ShieldCheck, Building2 } from 'lucide-react';
+import { TrendingUp, TrendingDown, Scale, Calendar, ArrowRight, Info, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { KpiCard } from '../components/kpi/KpiCard';
 import { totalIngresos, totalEgresos, balance, fechaActualizacion, periodoActual } from '../data/mockData';
@@ -28,7 +28,7 @@ export const Resumen: React.FC = () => {
                 Estado Financiero de Colonias Unidas
               </h1>
               <p className="text-xs sm:text-sm text-neutral-600 max-w-2xl leading-snug mt-0.5">
-                Bienvenido al portal público. En este panel podés consultar con total transparencia el balance oficial y las liquidaciones electrónicas acreditadas por la Tesorería General de la Provincia del Chaco.
+                Un portal simple para que cualquier vecino conozca con claridad el dinero que ingresa a la ciudad y cómo se invierte en obras y servicios comunitarios.
               </p>
             </div>
           </div>
@@ -49,24 +49,21 @@ export const Resumen: React.FC = () => {
         </div>
       </div>
 
-      {/* Banner Destacado de Datos Reales de Tesorería del Chaco */}
-      <div className="bg-gradient-to-r from-emerald-900 via-neutral-900 to-neutral-900 text-white rounded-xl p-4 sm:p-5 border border-emerald-800/60 shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+      {/* Banner Sencillo y Directo */}
+      <div className="bg-neutral-900 text-white rounded-xl p-4 sm:p-5 border border-neutral-800 shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex items-center gap-3.5">
-          <div className="p-2.5 bg-brand-green/20 border border-brand-green/40 rounded-xl shrink-0">
-            <Building2 className="w-6 h-6 text-brand-green" />
+          <div className="p-2.5 bg-brand-green rounded-xl shrink-0">
+            <CheckCircle2 className="w-6 h-6 text-white" />
           </div>
           <div>
-            <div className="flex items-center gap-2 mb-0.5">
-              <span className="text-[10px] font-black uppercase tracking-wider text-brand-green bg-brand-green/10 border border-brand-green/30 px-2 py-0.5 rounded">
-                Datos Reales Oficiales 2026
-              </span>
-              <span className="text-[10px] text-neutral-400 font-mono">CUIT 30670226723</span>
-            </div>
-            <h3 className="text-sm sm:text-base font-extrabold text-white">
-              Tesorería General de la Provincia del Chaco (Safyc 1003508)
+            <span className="text-[10px] font-black uppercase tracking-wider text-brand-green bg-brand-green/10 border border-brand-green/30 px-2 py-0.5 rounded">
+              Transparencia Abierta
+            </span>
+            <h3 className="text-sm sm:text-base font-extrabold text-white mt-1">
+              Información clara y transparente para toda la comunidad
             </h3>
             <p className="text-xs text-neutral-300 leading-snug mt-0.5">
-              Se registran 33 órdenes de pago por un total acumulado de <strong className="text-brand-green">$1.324.514.883,81</strong> procesadas correctamente por el Nuevo Banco del Chaco S.A.
+              Revisá el detalle de ingresos recibidos mes a mes de la Provincia del Chaco y las inversiones ejecutadas en 2026.
             </p>
           </div>
         </div>
@@ -75,31 +72,31 @@ export const Resumen: React.FC = () => {
           to="/ingresos"
           className="bg-brand-green hover:bg-brand-green-hover text-white font-extrabold text-xs px-4 py-2.5 rounded-lg transition-colors shadow-sm shrink-0 flex items-center justify-center gap-2 group self-start md:self-center"
         >
-          <span>Consultar 33 Pagos Electrónicos</span>
+          <span>Ver Ingresos Mes a Mes</span>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </Link>
       </div>
 
-      {/* Grid de 3 KPI Cards Principales */}
+      {/* Grid de 3 KPI Cards Principales Sencillas */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <KpiCard
           titulo="Total Ingresos 2026"
           monto={totalIngresos}
-          subtitulo="Fondos transferidos por Provincia ($1.324,5M) y recaudación local."
+          subtitulo="Fondos enviados por la Provincia y lo aportado por los vecinos."
           variant="green"
           icon={TrendingUp}
         />
         <KpiCard
-          titulo="Total Egresos 2026"
+          titulo="Total Invertido en la Ciudad"
           monto={totalEgresos}
-          subtitulo="Inversión planificada en obras públicas, salud, limpieza y haberes."
+          subtitulo="Inversión en obras públicas, salarios, limpieza y salud."
           variant="amber"
           icon={TrendingDown}
         />
         <KpiCard
-          titulo="Balance Neto"
+          titulo="Dinero Disponible (Balance)"
           monto={balance}
-          subtitulo="Superávit proyectado para imprevistos e infraestructura comunitaria."
+          subtitulo="Fondo reservado para imprevistos y futuras obras comunales."
           variant="neutral"
           icon={Scale}
         />
@@ -121,11 +118,11 @@ export const Resumen: React.FC = () => {
               Explorar Origen de Ingresos
             </h2>
             <p className="text-xs text-neutral-600 leading-snug">
-              Descubrí cómo se distribuyen las 33 transferencias de la Tesorería Provincial del Chaco, convenios del Instituto de Cultura y tasas municipales.
+              Conocé el desglose mensual de la Coparticipación Provincial, fondos para Cultura y las tasas municipales.
             </p>
           </div>
           <div className="pt-2 border-t border-neutral-100 flex items-center justify-between">
-            <span className="text-[11px] text-neutral-400 font-medium">4 categorías • 33 pagos verificados</span>
+            <span className="text-[11px] text-neutral-400 font-medium">4 rubros de origen</span>
             <Link
               to="/ingresos"
               className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-green hover:underline group-hover:translate-x-1 transition-transform"
@@ -149,11 +146,11 @@ export const Resumen: React.FC = () => {
               Explorar Destino de Egresos
             </h2>
             <p className="text-xs text-neutral-600 leading-snug">
-              Conocé el desglose presupuestario destinado a obras públicas, salud, limpieza urbana, educación y administración pública local.
+              Revisá lo invertido en asfalto, iluminación LED, limpieza, salud pública y escuelas de la ciudad.
             </p>
           </div>
           <div className="pt-2 border-t border-neutral-100 flex items-center justify-between">
-            <span className="text-[11px] text-neutral-400 font-medium">6 rubros principales</span>
+            <span className="text-[11px] text-neutral-400 font-medium">6 áreas de inversión</span>
             <Link
               to="/egresos"
               className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-amber hover:underline group-hover:translate-x-1 transition-transform"
@@ -173,9 +170,9 @@ export const Resumen: React.FC = () => {
             <Info className="w-4 h-4 text-white" />
           </div>
           <div>
-            <h3 className="font-extrabold text-sm text-white">¿Tenés dudas sobre algún término presupuestario?</h3>
+            <h3 className="font-extrabold text-sm text-white">¿Querés resolver dudas sobre los fondos?</h3>
             <p className="text-xs text-neutral-400 leading-snug">
-              Consultá nuestro Glosario de Preguntas Frecuentes traducido a un lenguaje llano y comprensible para todos los vecinos.
+              Visitá nuestra sección de Preguntas Frecuentes con respuestas explicadas en lenguaje llano y cotidiano.
             </p>
           </div>
         </div>
@@ -183,7 +180,7 @@ export const Resumen: React.FC = () => {
           to="/faq"
           className="bg-white text-neutral-900 hover:bg-neutral-100 px-4 py-2 rounded-lg font-bold text-xs shrink-0 transition-colors shadow-sm self-start sm:self-center"
         >
-          Ir al Glosario FAQ
+          Ir a Preguntas Frecuentes (FAQ)
         </Link>
       </div>
 
