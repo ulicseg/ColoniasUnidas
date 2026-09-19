@@ -92,146 +92,55 @@ export const coparticipacionMensual: MonthlyCoparticipation[] = [
   }
 ];
 
-const totalFPM = 1317982227;
-const totalConveniosICC = 6500000;
-const totalTasasPodjud = 32657;
-
 const rawIngresos = [
   {
-    id: 'cop-prov-fpm',
-    nombre: 'Coparticipación de la Provincia del Chaco',
-    monto: totalFPM,
-    descripcion: 'Plata que envía la Provincia del Chaco todos los meses de la recaudación general de impuestos para sostener la ciudad.',
+    id: 'fpm',
+    nombre: 'Fondo de Participación Municipal (FPM)',
+    monto: 1536591116.95,
+    descripcion: 'Fondos girados por la Provincia correspondientes a la coparticipación provincial y nacional.',
     color: '#477f32',
     detalles: [
       {
-        id: 'fpm-det-may',
-        concepto: 'Mayo 2026 (4 cuotas semanales)',
-        monto: 245981533,
-        descripcion: 'Mes récord de fondos recibidos en el año.'
-      },
-      {
-        id: 'fpm-det-jul',
-        concepto: 'Julio 2026 (4 cuotas semanales)',
-        monto: 206361493,
-        descripcion: 'Aportes ordinarios del mes de julio.'
-      },
-      {
-        id: 'fpm-det-ene',
-        concepto: 'Enero 2026 (4 cuotas semanales)',
-        monto: 186084143,
-        descripcion: 'Primer mes completo del ejercicio 2026.'
-      },
-      {
-        id: 'fpm-det-jun',
-        concepto: 'Junio 2026 (4 cuotas semanales)',
-        monto: 163371092,
-        descripcion: 'Fondos transferidos durante junio.'
-      },
-      {
-        id: 'fpm-det-abr',
-        concepto: 'Abril 2026 (4 cuotas semanales)',
-        monto: 148406629,
-        descripcion: 'Cuotas semanales correspondientes a abril.'
-      },
-      {
-        id: 'fpm-det-feb',
-        concepto: 'Febrero 2026 (4 cuotas semanales)',
-        monto: 143847307,
-        descripcion: 'Fondos ordinarios del mes de febrero.'
-      },
-      {
-        id: 'fpm-det-mar',
-        concepto: 'Marzo 2026 (4 cuotas semanales)',
-        monto: 124612093,
-        descripcion: 'Fondos transferidos durante marzo.'
-      },
-      {
-        id: 'fpm-det-dic25',
-        concepto: 'Ajuste de Diciembre anterior',
-        monto: 94499124,
-        descripcion: 'Última cuota del año anterior cobrada en enero.'
-      },
-      {
-        id: 'fpm-det-aug',
-        concepto: 'Agosto 2026 (1° cuota)',
-        monto: 4818812,
-        descripcion: 'Primera cuota ingresada a la fecha.'
+        id: 'fpm-det',
+        concepto: 'Liquidaciones FPM Enero a Septiembre 2026',
+        monto: 1536591116.95,
+        descripcion: 'Transferencias periódicas del Fondo de Participación Municipal según liquidaciones de la Tesorería General.'
       }
     ]
   },
   {
-    id: 'convenios-prov',
-    nombre: 'Aportes para Cultura y Eventos de la Ciudad',
-    monto: totalConveniosICC,
-    descripcion: 'Fondos especiales del Instituto de Cultura para los Carnavales y los festejos del Aniversario de Colonias Unidas.',
+    id: 'conv',
+    nombre: 'Transferencias por Convenios',
+    monto: 6500000,
+    descripcion: 'Aportes por convenios específicos con la Provincia.',
     color: '#5b9e42',
     detalles: [
       {
-        id: 'icc-1',
-        concepto: 'Festejos del 97° Aniversario de la Ciudad',
+        id: 'conv-1',
+        concepto: '97° Aniv. de su Fundación',
         monto: 5000000,
-        descripcion: 'Apoyo económico provincial para las celebraciones de la fundación de la ciudad.'
+        descripcion: 'Transferencia por convenio (Res N° 389/26).'
       },
       {
-        id: 'icc-2',
-        concepto: 'Ruta de los Carnavales 2026',
+        id: 'conv-2',
+        concepto: 'Ruta Carnavales 2026',
         monto: 1500000,
-        descripcion: 'Fondos para vestuario, música y organización de las comparsas de la ciudad.'
+        descripcion: 'Transferencia por convenio (Res N° 316/26).'
       }
     ]
   },
   {
     id: 'rec-local',
-    nombre: 'Impuestos y Tasas de los Vecinos',
-    monto: 48500000,
-    descripcion: 'Dinero abonado directamente por los vecinos y comerciantes locales por servicios de limpieza, alumbrado y licencias.',
+    nombre: 'Recaudación Judicializada',
+    monto: 32657,
+    descripcion: 'Ingresos por impuestos y tasas locales a través de juzgados u organismos provinciales.',
     color: '#76b95d',
     detalles: [
       {
         id: 'rec-loc-1',
-        concepto: 'Limpieza, Alumbrado y Servicios Generales (TGS)',
-        monto: 24500000,
-        descripcion: 'Mantenimiento de calles, recolección de basura e iluminación de plazas y barrios.'
-      },
-      {
-        id: 'rec-loc-2',
-        concepto: 'Tasa de Comercio e Inspección Local (DREI)',
-        monto: 16000000,
-        descripcion: 'Aportes de comercios, pymes y negocios radicados en la ciudad.'
-      },
-      {
-        id: 'rec-loc-3',
-        concepto: 'Licencias de Conducir y Trámites Municipalidad',
-        monto: 8000000,
-        descripcion: 'Emisión de carnets de conducir y trámites administrativos.'
-      }
-    ]
-  },
-  {
-    id: 'otros-ing',
-    nombre: 'Otros Ingresos y Juzgado de Paz',
-    monto: totalTasasPodjud + 3467343,
-    descripcion: 'Aportes del Juzgado de Paz local, alquiler de instalaciones municipales y multas menores.',
-    color: '#9ad483',
-    detalles: [
-      {
-        id: 'otros-1',
-        concepto: 'Tasas e Inmobiliario Juzgado de Paz',
+        concepto: 'Impuesto Inmobiliario y Tasas',
         monto: 32657,
-        descripcion: 'Aporte judicial por trámites en el Juzgado de Paz de Colonias Unidas.'
-      },
-      {
-        id: 'otros-2',
-        concepto: 'Alquiler de Salones y Predios Municipales',
-        monto: 2134700,
-        descripcion: 'Uso de instalaciones públicas para eventos comunitarios y deportivos.'
-      },
-      {
-        id: 'otros-3',
-        concepto: 'Multas de Tránsito y Faltas Menores',
-        monto: 1300000,
-        descripcion: 'Recaudación por infracciones comunitarias.'
+        descripcion: 'Pagos correspondientes al ejercicio 2026 (Juzgado de Paz Colonias Unidas).'
       }
     ]
   }
@@ -410,11 +319,11 @@ const rawEgresos = [
 ];
 
 // Calculamos totales dinámicamente
-export const totalIngresos = rawIngresos.reduce((acc, item) => acc + item.monto, 0); // $1.373.014.884
-export const totalEgresos = rawEgresos.reduce((acc, item) => acc + item.monto, 0);   // $0 (A la espera de rendición fehaciente)
-export const balance = totalIngresos - totalEgresos;                                 // $1.373.014.884
-export const fechaActualizacion = '16 de Agosto de 2026';
-export const periodoActual = 'Año 2026';
+export const totalIngresos = rawIngresos.reduce((acc, item) => acc + item.monto, 0);
+export const totalEgresos = rawEgresos.reduce((acc, item) => acc + item.monto, 0);
+export const balance = totalIngresos - totalEgresos;
+export const fechaActualizacion = '17 de Septiembre de 2026';
+export const periodoActual = 'Septiembre 2026';
 
 // Exportamos datos enriquecidos con porcentaje
 export const ingresos: FinancialItem[] = rawIngresos.map(item => ({
