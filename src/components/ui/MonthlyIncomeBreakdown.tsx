@@ -1,8 +1,9 @@
-import React from 'react';
-import { Calendar, TrendingUp, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { Calendar, TrendingUp, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
 import { coparticipacionMensual, formatCurrency } from '../../data/mockData';
 
 export const MonthlyIncomeBreakdown: React.FC = () => {
+  const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
   const maxMonto = Math.max(...coparticipacionMensual.map((m) => m.monto));
   const totalCoparticipacion = coparticipacionMensual.reduce((acc, m) => acc + m.monto, 0);
 
@@ -39,11 +40,13 @@ export const MonthlyIncomeBreakdown: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
         {coparticipacionMensual.map((item, idx) => {
           const porcentajeRelativo = Math.round((item.monto / maxMonto) * 100);
+          const isExpanded = expandedIdx === idx;
           
           return (
             <div
               key={idx}
-              className={`rounded-xl p-4 border transition-all relative overflow-hidden flex flex-col justify-between space-y-3 ${
+              onClick={() => setExpandedIdx(isExpanded ? null : idx)}
+              className={`rounded-xl p-4 border transition-all relative overflow-hidden flex flex-col justify-between space-y-3 cursor-pointer ${
                 item.destacado
                   ? 'bg-emerald-50/50 border-emerald-300 shadow-xs'
                   : 'bg-neutral-50/60 border-neutral-200 hover:border-neutral-300 hover:bg-white'
@@ -52,8 +55,9 @@ export const MonthlyIncomeBreakdown: React.FC = () => {
               {/* Header de la Tarjeta Mensual */}
               <div className="space-y-1">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-black text-neutral-900 tracking-tight">
+                  <span className="text-xs font-black text-neutral-900 tracking-tight flex items-center gap-1.5">
                     {item.mes}
+                    {isExpanded ? <ChevronUp className="w-3.5 h-3.5 text-neutral-400" /> : <ChevronDown className="w-3.5 h-3.5 text-neutral-400" />}
                   </span>
                   {item.destacado ? (
                     <span className="inline-flex items-center gap-1 text-[10px] font-black bg-brand-green text-white px-2 py-0.5 rounded-md uppercase tracking-wider">
@@ -78,6 +82,23 @@ export const MonthlyIncomeBreakdown: React.FC = () => {
                   {item.descripcion}
                 </p>
               </div>
+
+              {/* Detalle de Cuotas */}
+              {isExpanded && item.cuotasDetalle && (
+                <div className="mt-3 pt-3 border-t border-neutral-200/60 space-y-2">
+                  {item.cuotasDetalle.map((cuota, cIdx) => (
+                    <div key={cIdx} className="flex justify-between items-center text-xs">
+                      <div>
+                        <span className="block font-semibold text-neutral-800">{cuota.descripcion}</span>
+                        <span className="block text-[10px] text-neutral-500">{cuota.fecha}</span>
+                      </div>
+                      <span className="font-medium text-neutral-900 tabular-nums">
+                        {formatCurrency(cuota.monto)}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {/* Barra Relativa de Comparación Visual entre Meses */}
               <div className="space-y-1 pt-1">

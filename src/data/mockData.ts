@@ -31,70 +31,126 @@ export interface MonthlyCoparticipation {
   monto: number;
   descripcion: string;
   destacado?: boolean;
+  cuotasDetalle?: { fecha: string; monto: number; descripcion: string }[];
 }
 
 // Datos de Coparticipación Provincial mes a mes en 2026 (Lenguaje simple y claro)
 export const coparticipacionMensual: MonthlyCoparticipation[] = [
   {
-    mes: 'Mayo 2026',
-    cuotas: 4,
-    monto: 245981533,
-    descripcion: 'Mes de mayor ingreso registrado en el año por actividad económica provincial.',
-    destacado: true
-  },
-  {
-    mes: 'Julio 2026',
-    cuotas: 4,
-    monto: 206361493,
-    descripcion: 'Acreditación completa de las 4 semanas de coparticipación.'
+    mes: 'Septiembre 2026',
+    cuotas: 2,
+    monto: 33711711,
+    descripcion: 'Primeras cuotas de coparticipación acreditadas en el mes.',
+    cuotasDetalle: [
+      { fecha: '17/09/2026', monto: 29142255.37, descripcion: '2° Cuota de Septiembre' },
+      { fecha: '10/09/2026', monto: 4569455.65, descripcion: '1° Cuota de Septiembre' }
+    ]
   },
   {
     mes: 'Agosto 2026',
     cuotas: 4,
     monto: 189715992,
-    descripcion: 'Acreditación completa de las 4 semanas de coparticipación.'
+    descripcion: 'Acreditación completa de las 4 semanas de coparticipación.',
+    cuotasDetalle: [
+      { fecha: '03/09/2026', monto: 102422921.51, descripcion: '4° Cuota de Agosto' },
+      { fecha: '26/08/2026', monto: 36273329.25, descripcion: '3° Cuota de Agosto' },
+      { fecha: '20/08/2026', monto: 46200928.36, descripcion: '2° Cuota de Agosto' },
+      { fecha: '12/08/2026', monto: 4818812.48, descripcion: '1° Cuota de Agosto' }
+    ]
   },
   {
-    mes: 'Enero 2026',
+    mes: 'Julio 2026',
     cuotas: 4,
-    monto: 186084143,
-    descripcion: 'Fondos iniciales de coparticipación del nuevo año.'
+    monto: 206361493,
+    descripcion: 'Acreditación completa de las 4 semanas de coparticipación.',
+    cuotasDetalle: [
+      { fecha: '05/08/2026', monto: 130597075.04, descripcion: '4° Cuota de Julio' },
+      { fecha: '23/07/2026', monto: 65175285.44, descripcion: '3° Cuota de Julio' },
+      { fecha: '16/07/2026', monto: 6102662.94, descripcion: '2° Cuota de Julio' },
+      { fecha: '14/07/2026', monto: 4486469.70, descripcion: '1° Cuota de Julio' }
+    ]
   },
   {
     mes: 'Junio 2026',
     cuotas: 4,
     monto: 163371092,
-    descripcion: 'Recursos provinciales destinados a servicios generales de mitad de año.'
+    descripcion: 'Recursos provinciales destinados a servicios generales de mitad de año.',
+    cuotasDetalle: [
+      { fecha: '03/07/2026', monto: 117334551.12, descripcion: '4° Cuota de Junio' },
+      { fecha: '24/06/2026', monto: 16615795.68, descripcion: '3° Cuota de Junio' },
+      { fecha: '18/06/2026', monto: 25036852.20, descripcion: '2° Cuota de Junio' },
+      { fecha: '10/06/2026', monto: 4383893.00, descripcion: '1° Cuota de Junio' }
+    ]
+  },
+  {
+    mes: 'Mayo 2026',
+    cuotas: 4,
+    monto: 245981533,
+    descripcion: 'Mes de mayor ingreso registrado en el año por actividad económica provincial.',
+    destacado: true,
+    cuotasDetalle: [
+      { fecha: '03/06/2026', monto: 83329170.72, descripcion: '4° Cuota de Mayo' },
+      { fecha: '27/05/2026', monto: 128901615.17, descripcion: '3° Cuota de Mayo' },
+      { fecha: '19/05/2026', monto: 29140448.54, descripcion: '2° Cuota de Mayo' },
+      { fecha: '12/05/2026', monto: 4610298.70, descripcion: '1° Cuota de Mayo' }
+    ]
   },
   {
     mes: 'Abril 2026',
     cuotas: 4,
     monto: 148406629,
-    descripcion: 'Transferencias semanales ordinarias enviadas por Provincia.'
-  },
-  {
-    mes: 'Febrero 2026',
-    cuotas: 4,
-    monto: 143847307,
-    descripcion: 'Acreditaciones de coparticipación del segundo mes del año.'
+    descripcion: 'Transferencias semanales ordinarias enviadas por Provincia.',
+    cuotasDetalle: [
+      { fecha: '06/05/2026', monto: 94181093.89, descripcion: '4° Cuota de Abril' },
+      { fecha: '24/04/2026', monto: 22232566.03, descripcion: '3° Cuota de Abril' },
+      { fecha: '16/04/2026', monto: 29505959.61, descripcion: '2° Cuota de Abril' },
+      { fecha: '09/04/2026', monto: 2487009.04, descripcion: '1° Cuota de Abril' }
+    ]
   },
   {
     mes: 'Marzo 2026',
     cuotas: 4,
     monto: 124612093,
-    descripcion: 'Ingresos coparticipables provinciales correspondientes a marzo.'
+    descripcion: 'Ingresos coparticipables provinciales correspondientes a marzo.',
+    cuotasDetalle: [
+      { fecha: '07/04/2026', monto: 69699475.59, descripcion: '4° Cuota de Marzo' },
+      { fecha: '26/03/2026', monto: 22704832.73, descripcion: '3° Cuota de Marzo' },
+      { fecha: '18/03/2026', monto: 27727797.19, descripcion: '2° Cuota de Marzo' },
+      { fecha: '11/03/2026', monto: 4479987.65, descripcion: '1° Cuota de Marzo' }
+    ]
+  },
+  {
+    mes: 'Febrero 2026',
+    cuotas: 4,
+    monto: 143847307,
+    descripcion: 'Acreditaciones de coparticipación del segundo mes del año.',
+    cuotasDetalle: [
+      { fecha: '04/03/2026', monto: 89744870.64, descripcion: '4° Cuota de Febrero' },
+      { fecha: '25/02/2026', monto: 17400288.01, descripcion: '3° Cuota de Febrero' },
+      { fecha: '20/02/2026', monto: 36121625.37, descripcion: '2° Cuota de Febrero' },
+      { fecha: '11/02/2026', monto: 580523.32, descripcion: '1° Cuota de Febrero' }
+    ]
+  },
+  {
+    mes: 'Enero 2026',
+    cuotas: 4,
+    monto: 186084143,
+    descripcion: 'Fondos iniciales de coparticipación del nuevo año.',
+    cuotasDetalle: [
+      { fecha: '04/02/2026', monto: 91258127.74, descripcion: '4° Cuota de Enero' },
+      { fecha: '26/01/2026', monto: 34078992.40, descripcion: '3° Cuota de Enero' },
+      { fecha: '19/01/2026', monto: 44604163.49, descripcion: '2° Cuota de Enero' },
+      { fecha: '12/01/2026', monto: 16142859.38, descripcion: '1° Cuota de Enero' }
+    ]
   },
   {
     mes: 'Ajuste Dic. 2025',
     cuotas: 1,
     monto: 94499124,
-    descripcion: 'Liquidación final del año anterior cobrada en los primeros días de enero.'
-  },
-  {
-    mes: 'Septiembre 2026',
-    cuotas: 2,
-    monto: 33711711,
-    descripcion: 'Primeras cuotas de coparticipación acreditadas en el mes.'
+    descripcion: 'Liquidación final del año anterior cobrada en los primeros días de enero.',
+    cuotasDetalle: [
+      { fecha: '06/01/2026', monto: 94499124.00, descripcion: '4° Cuota de Diciembre 2025' }
+    ]
   }
 ];
 
