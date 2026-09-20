@@ -7,8 +7,8 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { to: '/inicio', label: 'Inicio', icon: LayoutDashboard },
-    { to: '/ingresos', label: 'Ingresos', icon: TrendingUp },
-    { to: '/egresos', label: 'Egresos', icon: TrendingDown },
+    { to: '/ingresos', label: 'Ingresos', icon: TrendingDown },
+    { to: '/egresos', label: 'Egresos', icon: TrendingUp },
     { to: '/faq', label: 'Preguntas Frecuentes', icon: HelpCircle },
   ];
 
