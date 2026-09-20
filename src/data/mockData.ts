@@ -49,6 +49,12 @@ export const coparticipacionMensual: MonthlyCoparticipation[] = [
     descripcion: 'Acreditación completa de las 4 semanas de coparticipación.'
   },
   {
+    mes: 'Agosto 2026',
+    cuotas: 4,
+    monto: 189715992,
+    descripcion: 'Acreditación completa de las 4 semanas de coparticipación.'
+  },
+  {
     mes: 'Enero 2026',
     cuotas: 4,
     monto: 186084143,
@@ -85,10 +91,10 @@ export const coparticipacionMensual: MonthlyCoparticipation[] = [
     descripcion: 'Liquidación final del año anterior cobrada en los primeros días de enero.'
   },
   {
-    mes: 'Agosto 2026',
-    cuotas: 1,
-    monto: 4818812,
-    descripcion: 'Primera cuota cobrada a la fecha de este informe.'
+    mes: 'Septiembre 2026',
+    cuotas: 2,
+    monto: 33711711,
+    descripcion: 'Primeras cuotas de coparticipación acreditadas en el mes.'
   }
 ];
 
@@ -322,7 +328,7 @@ const rawEgresos = [
 export const totalIngresos = rawIngresos.reduce((acc, item) => acc + item.monto, 0);
 export const totalEgresos = rawEgresos.reduce((acc, item) => acc + item.monto, 0);
 export const balance = totalIngresos - totalEgresos;
-export const fechaActualizacion = '17 de Septiembre de 2026';
+export const fechaActualizacion = '19 de Septiembre de 2026';
 export const periodoActual = 'Septiembre 2026';
 
 // Exportamos datos enriquecidos con porcentaje
