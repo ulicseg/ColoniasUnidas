@@ -38,10 +38,12 @@ export interface MonthlyCoparticipation {
 export const coparticipacionMensual: MonthlyCoparticipation[] = [
   {
     mes: 'Septiembre 2026',
-    cuotas: 2,
-    monto: 33711711,
-    descripcion: 'Primeras cuotas de coparticipación acreditadas en el mes.',
+    cuotas: 4,
+    monto: 195864637,
+    descripcion: 'Acreditación completa de las 4 semanas de coparticipación.',
     cuotasDetalle: [
+      { fecha: '05/10/2026', monto: 125633496.58, descripcion: '4° Cuota de Septiembre' },
+      { fecha: '24/09/2026', monto: 36519429.24, descripcion: '3° Cuota de Septiembre' },
       { fecha: '17/09/2026', monto: 29142255.37, descripcion: '2° Cuota de Septiembre' },
       { fecha: '10/09/2026', monto: 4569455.65, descripcion: '1° Cuota de Septiembre' }
     ]
@@ -158,14 +160,14 @@ const rawIngresos = [
   {
     id: 'fpm',
     nombre: 'Fondo de Participación Municipal (FPM)',
-    monto: 1536591116.95,
+    monto: 1698744042.77,
     descripcion: 'Fondos girados por la Provincia correspondientes a la coparticipación provincial y nacional.',
     color: '#477f32',
     detalles: [
       {
         id: 'fpm-det',
         concepto: 'Liquidaciones FPM Enero a Septiembre 2026',
-        monto: 1536591116.95,
+        monto: 1698744042.77,
         descripcion: 'Transferencias periódicas del Fondo de Participación Municipal según liquidaciones de la Tesorería General.'
       }
     ]
@@ -384,7 +386,7 @@ const rawEgresos = [
 export const totalIngresos = rawIngresos.reduce((acc, item) => acc + item.monto, 0);
 export const totalEgresos = rawEgresos.reduce((acc, item) => acc + item.monto, 0);
 export const balance = totalIngresos - totalEgresos;
-export const fechaActualizacion = '19 de Septiembre de 2026';
+export const fechaActualizacion = '10 de Octubre de 2026';
 export const periodoActual = 'Septiembre 2026';
 
 // Exportamos datos enriquecidos con porcentaje
